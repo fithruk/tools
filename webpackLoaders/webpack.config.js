@@ -17,7 +17,6 @@ module.exports = {
       filename: "index.html",
     }),
   ],
-  //   devtool: "eval-source-maps",
   module: {
     rules: [
       {
@@ -26,12 +25,7 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: [
-          // compiles Less to CSS
-          "style-loader",
-          "css-loader",
-          "less-loader",
-        ],
+        use: ["style-loader", "css-loader", "less-loader"],
       },
       {
         test: /\.(jpg|png|svg|jpeg|gif)$/,
@@ -42,11 +36,11 @@ module.exports = {
           },
         },
       },
-      //   {
-      //     test: /\.js$/,
-      //     enforce: "pre",
-      //     use: ["source-map-loader"],
-      //   },
+      {
+        test: /\.js$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
+      },
     ],
   },
 };
