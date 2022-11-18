@@ -1,6 +1,4 @@
-export const createNewTaskObj = (text) => {
-  return {
-    text,
-    done: false,
-  };
-};
+export const createNewTaskObj = (text) => ({
+  text,
+  done: false,
+});
