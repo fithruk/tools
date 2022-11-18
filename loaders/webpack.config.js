@@ -35,7 +35,7 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.resolve("./src/index.html"),
+        template: "./src/index.html",
       }),
     ],
     devServer: {
