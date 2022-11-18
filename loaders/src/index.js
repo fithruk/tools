@@ -9,3 +9,5 @@ const profileData = {
 };
 
 renderProfile(profileData);
+
+alert("App is ready");
