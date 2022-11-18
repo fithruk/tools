@@ -41,7 +41,7 @@ module.exports = (env, argv) => {
       plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-          template: path.resolve("./src/index.html"),
+          template: "./src/index.html",
         }),
       ],
       devServer: {
