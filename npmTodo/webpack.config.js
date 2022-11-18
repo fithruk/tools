@@ -19,7 +19,6 @@ module.exports = (env, argv) => {
           test: /.s?css$/,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : "style-loader",
-            ,
             "css-loader",
             "sass-loader",
           ],
@@ -38,16 +37,16 @@ module.exports = (env, argv) => {
           ],
         },
       ],
-      plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-          template: "./src/index.html",
-        }),
-      ],
-      devServer: {
-        port: 9000,
-        hot: true,
-      },
+    },
+    plugins: [
+      new CleanWebpackPlugin(),
+      new HtmlWebpackPlugin({
+        template: "./src/index.html",
+      }),
+    ],
+    devServer: {
+      port: 9000,
+      hot: true,
     },
   };
 
